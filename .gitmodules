@@ -1,0 +1,6 @@
+[submodule "eHM"]
+	path = eHM
+	url = https://github.com/barsa-net/ezhypriotmonitor.git
+[submodule "libs/rpi_rev"]
+	path = libs/rpi_rev
+	url = https://github.com/barsa-net/raspberry_pi_revision.git
