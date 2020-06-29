@@ -20,6 +20,8 @@ If you are uncomfortable with some bind you can omit it, but you will lose some 
 
 ### Config file
 `-v=$PWD/esm.config.json:/var/www/html/conf/esm.config.json`
+
+Please be sure `esm.config.json` exists in your current directory or you will have to change its path.
 ### System block
 #### Timezone
 `-v=/etc/timezone:/etc/timezone:ro`
