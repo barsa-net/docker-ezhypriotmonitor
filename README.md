@@ -1,5 +1,5 @@
-# docker-ezhypriotmonitor
-eZ Hypriot Monitor implemented in a Docker container.
+# docker-ezpimonitor
+eZ Pi Monitor implemented in a Docker container.
 This is a dashboard for Hyperiot OS running on a Raspberry Pi
 
 ## Usage
@@ -7,7 +7,7 @@ Clone the repository with `git clone --recursive` or update your current reposit
 
 Edit `esm.conf.json` as you please (the [ESM\`WEB documentation](https://www.ezservermonitor.com/esm-web/documentation) explains all the parameters of esm.config.json).
 
-Build the container with `docker build docker-ezhypriotmonitor -t ehm`
+Build the container with `docker build docker-ezpimonitor -t ehm`
 
 Run with
 ```
