@@ -3,7 +3,7 @@ eZ Hypriot Monitor implemented in a Docker container.
 This is a dashboard for Hyperiot OS running on a Raspberry Pi
 
 ## Usage
-Clone the repository with `git clone --recursive`
+Clone the repository with `git clone --recursive` or update your current repository with `git pull --recurse-submodules`
 
 Edit `esm.conf.json` as you please (the [ESM\`WEB documentation](https://www.ezservermonitor.com/esm-web/documentation) explains all the parameters of esm.config.json).
 
