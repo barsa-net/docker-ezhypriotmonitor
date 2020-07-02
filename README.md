@@ -11,7 +11,7 @@ Build the container with `docker build docker-ezpimonitor -t epm`
 
 Run with
 ```
-docker run -d -p=80:80 -v=/etc/timezone:/etc/timezone:ro -v=/etc/localtime:/etc/localtime:ro -v=/etc/hostname:/dockerhost/etc/hostname:ro -v=/usr/lib/os-release:/dockerhost/usr/lib/os-release:ro -v=/var/run/utmp:/dockerhost/var/run/utmp:ro -v=/sys/class/net:/dockerhost/sys/class/net:ro -v=/boot/mountinfo.d:/mountinfo.d/boot -v=/var/log/lastlog:/dockerhost/var/log/lastlog:ro -v=/etc/passwd:/dockerhost/etc/passwd:ro $(ip a | awk '/inet / {print}' | awk '!(/br-/||/docker0/||/veth/) {print "dockerhost."$NF":"$2}' | sed 's/\/[0-9]*//g' | sed 's/^/--add-host=/g' | tr '\n' ' ') --restart always --name epm epm
+docker run -d -p=80:80 -v=$PWD/esm.config.json:/var/www/html/conf/esm.config.json -v=/etc/timezone:/etc/timezone:ro -v=/etc/localtime:/etc/localtime:ro -v=/etc/hostname:/dockerhost/etc/hostname:ro -v=/usr/lib/os-release:/dockerhost/usr/lib/os-release:ro -v=/var/run/utmp:/dockerhost/var/run/utmp:ro -v=/sys/class/net:/dockerhost/sys/class/net:ro -v=/boot/mountinfo.d:/mountinfo.d/boot -v=/var/log/lastlog:/dockerhost/var/log/lastlog:ro -v=/etc/passwd:/dockerhost/etc/passwd:ro $(ip a | awk '/inet / {print}' | awk '!(/br-/||/docker0/||/veth/) {print "dockerhost."$NF":"$2}' | sed 's/\/[0-9]*//g' | sed 's/^/--add-host=/g' | tr '\n' ' ') --restart always --name epm epm
 ```
 
 ## Run options explanation
